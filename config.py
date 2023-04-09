@@ -35,10 +35,6 @@ CACHED_SEARCH_RESULTS = {}
 EXPLOITS_TREE = []
 EXPLOITS_ARRAY = []
 
-
-
-
-
 # Functions
 def getClient():
     MSFRPC_CONFIG = open(PROJECT_PATH + "/config/" + "msfrpc-config.json")

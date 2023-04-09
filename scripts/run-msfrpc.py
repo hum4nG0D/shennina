@@ -16,10 +16,11 @@ def main():
         launching_option = "msfrpcd"
 
     if launching_option == "msfconsole":
-        cmd = "msfconsole -x 'load msgrpc ServerHost={host} User={user} Pass={password} ServerPort={port} SSL=true'".format(password=MSFRPC_CONFIG["password"],
+        cmd = "msfconsole -q -x 'load msgrpc ServerHost={host} User={user} Pass={password} ServerPort={port} SSL=true'".format(password=MSFRPC_CONFIG["password"],
                                                                                                                             user=MSFRPC_CONFIG["user"],
                                                                                                                             host=MSFRPC_CONFIG["host"],
-                                                                                                                            port=MSFRPC_CONFIG["port"])
+                                                                                                                            port=MSFRPC_CONFIG["port"],
+                                                                                                                            ssl=MSRPC_CONFIG["ssl"])
     elif launching_option == "msfrpcd":
         cmd = "msfrpcd -p {port} -P {password} -U {user} -a {host}".format(password=MSFRPC_CONFIG["password"],
                                                                            user=MSFRPC_CONFIG["user"],
